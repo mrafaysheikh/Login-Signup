@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+</head>
+<body>
+    
+        
+
+
+    <link rel="stylesheet" href="style.css">
+    <header>
+
+       
+        <pre>
+            <b> <a href="https://google.com" target="_main">ABOUT</a></b>     <b><a href="https://lenovo.com" target="_main">CONTACT</a></b>     <b><a href="https://samsung.com" target="_main">MENU</a></b>    <input type="text" id="search-bar" placeholder="Search here"> <button id="search-button">Search</button>           
+        </pre>
+             <hr>
+    </header>
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form action="/login-handler.js" method="POST">
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" name="email" required>
+              <br>
+              <label for="login-password">Password:</label>
+              <input type="password" id="login-password" name="password" required>
+              <br>
+              <button type="submit">Login</button>
+            </form>
+          </section>
+
+        <section id="signup">
+            <h2>Signup</h2>
+            <form action="/signup-handler.js" method="post">
+               <label for="signup-email">Email:</label>
+               <input type="email" id="signup-email" name="email" required> 
+               <br>
+               <label for="signup-password">Password</label>
+               <input type="password" id="signup-password" name="password" required>
+               <br>
+               <button type="submit">signup</button>
+            </form>
+          </section>
+                     </main>
+
+            <hr>         
+                     
+        <footer>
+            <div>
+              <p>&copy; 2024 Your Website. All rights reserved.</p>
+            </div>
+          </footer>
+
+        <script>
+            // Search bar functionality
+            document.getElementById('search-bar').addEventListener('input', function(event) {
+                const searchValue = event.target.value;
+                console.log(`Searching for: ${searchValue}`);
+            });
+    
+            // Login form validation
+            document.getElementById('login-form').addEventListener('submit', function(event) {
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+    
+                if (!email || !password) {
+                    event.preventDefault();
+                    alert('Please fill in all login fields!');
+                }
+            });
+    
+            // Signup form validation
+            document.getElementById('signup-form').addEventListener('submit', function(event) {
+                const email = document.getElementById('signup-email').value;
+                const password = document.getElementById('signup-password').value;
+    
+                if (!email || !password) {
+                    event.preventDefault();
+                    alert('Please fill in all signup fields!');
+                } else if (password.length < 6) {
+                    event.preventDefault();
+                    alert('Password must be at least 6 characters long!');
+                }
+            });
+        </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
