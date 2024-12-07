@@ -55,40 +55,7 @@
             </div>
           </footer>
 
-        <script>
-            // Search bar functionality
-            document.getElementById('search-bar').addEventListener('input', function(event) {
-                const searchValue = event.target.value;
-                console.log(`Searching for: ${searchValue}`);
-            });
-    
-            // Login form validation
-            document.getElementById('login-form').addEventListener('submit', function(event) {
-                const email = document.getElementById('login-email').value;
-                const password = document.getElementById('login-password').value;
-    
-                if (!email || !password) {
-                    event.preventDefault();
-                    alert('Please fill in all login fields!');
-                }
-            });
-    
-            // Signup form validation
-            document.getElementById('signup-form').addEventListener('submit', function(event) {
-                const email = document.getElementById('signup-email').value;
-                const password = document.getElementById('signup-password').value;
-    
-                if (!email || !password) {
-                    event.preventDefault();
-                    alert('Please fill in all signup fields!');
-                } else if (password.length < 6) {
-                    event.preventDefault();
-                    alert('Password must be at least 6 characters long!');
-                }
-            });
-        </script>
-
-</body>
+        </body>
 </html>
 
 
